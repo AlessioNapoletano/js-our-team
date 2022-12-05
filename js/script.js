@@ -53,7 +53,7 @@ for (let i = 0; i < memberOfTeam.length; i++) {
 
     //CREO l'elemento div, AGGIUNGO il div creato all'elemento main
     const divColElement = document.createElement("div");
-    divColElement.classList.add("col-12", "mb-3", "col-md-4", "text-center");
+    divColElement.classList.add("col-12", "col-md-6", "col-lg-4", "mb-3", "text-center");
     divRowElement.append(divColElement);
 
     //CREO l'elemento card, che sarà contenuto nella div col
@@ -87,7 +87,7 @@ for (let i = 0; i < memberOfTeam.length; i++) {
             const newPElement = document.createElement("p");
             newPElement.innerHTML = key + ": " + currentMembere[key];
             cardBody.append(newPElement);
-        }           
+        }       
     }
 
     //CREO l'elemento a, AGGIUNGO all'elemento a delle classi, INSERISCO l'elemento a nel div-body-card
