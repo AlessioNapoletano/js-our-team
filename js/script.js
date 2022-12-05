@@ -33,23 +33,47 @@ const memberOfTeam =
     ];
 
 const mainElement = document.querySelector("main");
+mainElement.classList.add("d-flex", "flex-wrap");
 
+const divContainerElement = document.createElement("div");
+divContainerElement.classList.add("container-fluid");
+mainElement.append(divContainerElement);
+
+const divRowElement = document.createElement("div");
+divRowElement.classList.add("row", "d-flex", "flex-wrap");
+divContainerElement.append(divRowElement);
+
+
+
+
+let number = 0;
 
 
 for (let i = 0; i < memberOfTeam.length; i++) {
-    console.log(i + "° Membro: ");
+    number++;
+    console.log(number + "° Membro: ");
+
+    //CREO l'elemento div, AGGIUNGO il div creato all'elemento main
+    const divColElement = document.createElement("div");
+    divColElement.classList.add("col-12", "mb-3", "col-md-4" , "border" , "radius");
+    divRowElement.append(divColElement);
+
+
+    //CREO l'elemento h2, AGGIUGNO l'elemento h2 al div
     const newH2element = document.createElement("h2");
-    newH2element.classList.add("px-3")
-    newH2element.innerHTML = i + "° Membro: ";
-    mainElement.append(newH2element);
+    newH2element.innerHTML = number + "° Membro: ";
+    newH2element.classList.add("text-center");
+    divColElement.append(newH2element);
+
     for (let key in memberOfTeam[i]) {
         let currentMembere = memberOfTeam[i];
         console.log(key + ": " + currentMembere[key]);
-        const newSpanElement = document.createElement("span");
-        newSpanElement.innerHTML = key + ": " + currentMembere[key];
-        newSpanElement.classList.add("px-3")
-        mainElement.append(newSpanElement);
-        
+
+        //CREO l'elemento p, ASSEGNO all'elemento una classe, AGGIUGNO l'elemento p al div
+        const newPElement = document.createElement("p");
+        newPElement.innerHTML = key + ": " + currentMembere[key];
+        divColElement.append(newPElement);
+
     }
 }
 
