@@ -78,6 +78,17 @@ for (let i = 0; i < memberOfTeam.length; i++) {
     newH5element.classList.add("text-center", "fw-bold");
     cardBody.append(newH5element);
 
+    //CREO l'elemento nome, ASSEGNO all'innerHTML dell'elemento nomne la chiave "name", INSERISCO l'elemento creato nel cadbody
+    const nameElement = document.createElement("p");
+    nameElement.innerHTML = "Nome: "  + memberOfTeam[i].name;
+    cardBody.append(nameElement);
+
+    //CREO l'elemento ruolo, ASSEGNO all'innerHTML dell'elemento nomne la chiave "role", INSERISCO l'elemento creato nel cadbody
+    const roleElement = document.createElement("p");
+    roleElement.innerHTML = "Ruolo: "  + memberOfTeam[i].role;
+    cardBody.append(roleElement);
+
+    /*
     for (let key in memberOfTeam[i]) {
         let currentMembere = memberOfTeam[i];
         console.log(key + ": " + currentMembere[key]);
@@ -88,7 +99,7 @@ for (let i = 0; i < memberOfTeam.length; i++) {
             newPElement.innerHTML = key + ": " + currentMembere[key];
             cardBody.append(newPElement);
         }       
-    }
+    }*/
 
     //CREO l'elemento a, AGGIUNGO all'elemento a delle classi, INSERISCO l'elemento a nel div-body-card
     const newAElement = document.createElement("a");
