@@ -45,11 +45,8 @@ const divRowElement = document.createElement("div");
 divRowElement.classList.add("row", "d-flex", "flex-wrap");
 divContainerElement.append(divRowElement);
 
-let number = 0;
 
 for (let i = 0; i < memberOfTeam.length; i++) {
-    number++;
-    console.log(number + "° Membro: ");
 
     //CREO l'elemento div, AGGIUNGO il div creato all'elemento main
     const divColElement = document.createElement("div");
