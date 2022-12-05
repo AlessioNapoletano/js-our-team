@@ -75,17 +75,19 @@ for (let i = 0; i < memberOfTeam.length; i++) {
     //CREO l'elemento h5, AGGIUNGO la classe text-center, INSERISCO l'elemento nel card-body
     const newH5element = document.createElement("h5");
     newH5element.innerHTML = memberOfTeam[i].name;
-    newH5element.classList.add("text-center" , "fw-bold");
+    newH5element.classList.add("text-center", "fw-bold");
     cardBody.append(newH5element);
 
     for (let key in memberOfTeam[i]) {
         let currentMembere = memberOfTeam[i];
         console.log(key + ": " + currentMembere[key]);
 
-        //CREO l'elemento p, ASSEGNO all'elemento una classe, AGGIUGNO l'elemento p al div-card-body
-        const newPElement = document.createElement("p");
-        newPElement.innerHTML = key + ": " + currentMembere[key];
-        cardBody.append(newPElement);
+        if (key != "picture") {
+            //CREO l'elemento p, ASSEGNO all'elemento una classe, AGGIUGNO l'elemento p al div-card-body
+            const newPElement = document.createElement("p");
+            newPElement.innerHTML = key + ": " + currentMembere[key];
+            cardBody.append(newPElement);
+        }           
     }
 
     //CREO l'elemento a, AGGIUNGO all'elemento a delle classi, INSERISCO l'elemento a nel div-body-card
