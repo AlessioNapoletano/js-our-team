@@ -17,8 +17,8 @@ const memberOfTeam =
         },
         {
             name: "Angela Lopez",
-            role: "Social Media",
-            picture: "Manager  angela-lopez-social-media-manager.jpg"
+            role: "Social Media Manager",
+            picture: "angela-lopez-social-media-manager.jpg"
         },
         {
             name: "Scott Estrada",
@@ -55,7 +55,7 @@ for (let i = 0; i < memberOfTeam.length; i++) {
 
     //CREO l'elemento div, AGGIUNGO il div creato all'elemento main
     const divColElement = document.createElement("div");
-    divColElement.classList.add("col-12", "mb-3", "col-md-4" , "border" , "radius");
+    divColElement.classList.add("col-12", "mb-3", "col-md-4", "border", "rounded", "text-center");
     divRowElement.append(divColElement);
 
 
@@ -64,6 +64,10 @@ for (let i = 0; i < memberOfTeam.length; i++) {
     newH2element.innerHTML = number + "° Membro: ";
     newH2element.classList.add("text-center");
     divColElement.append(newH2element);
+
+    const newImgElement = document.createElement("img");
+    newImgElement.src = "./img/" + memberOfTeam[i].picture;
+    divColElement.append(newImgElement);
 
     for (let key in memberOfTeam[i]) {
         let currentMembere = memberOfTeam[i];
