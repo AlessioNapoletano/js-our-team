@@ -32,19 +32,18 @@ const memberOfTeam =
         }
     ];
 
+//PRENDO l'elemento main, nell'index e lo salvo nella varibile mainElement
 const mainElement = document.querySelector("main");
-mainElement.classList.add("d-flex", "flex-wrap");
 
+//CREO l'elemento container, AGGIUNGO la classe container-fluid, INSERISCO l'elemento creato nel main
 const divContainerElement = document.createElement("div");
 divContainerElement.classList.add("container-fluid");
 mainElement.append(divContainerElement);
 
+//CREO l'elemento row, AGGIUNGO la classe row e le classi flex, INSERISCO l'elemento creato nel div-container
 const divRowElement = document.createElement("div");
 divRowElement.classList.add("row", "d-flex", "flex-wrap");
 divContainerElement.append(divRowElement);
-
-
-
 
 let number = 0;
 
