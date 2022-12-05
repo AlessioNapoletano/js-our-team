@@ -58,7 +58,7 @@ for (let i = 0; i < memberOfTeam.length; i++) {
 
     //CREO l'elemento card, che sarà contenuto nella div col
     const divCard = document.createElement("div");
-    divCard.classList.add("card");
+    divCard.classList.add("card", "m-auto");
     divColElement.append(divCard);
 
     //CREO l'elemento img, AGGIUGNO l'elemento img alla divCard
